@@ -28,7 +28,7 @@
 
 
 
-var isValid = function(s) {
+var isValid2 = function(s) {
   let stack = [];
   let mapping = {
       ')': '(',
@@ -50,11 +50,68 @@ var isValid = function(s) {
   return !stack.length;
 };
 
+
+
+
+
+var isValid = function(s) {
+
+  if(!s || s.length === 1){
+    return false
+  }
+  let stack = []
+  let parentMap = {
+     ')' : '(',
+     ']' : '[',
+     '}' : '{',
+  }
+
+  for(let char of s){
+    if(parentMap[char]){
+      let topChar = stack.pop() || '#'
+        if(topChar !== parentMap[char]){
+          return false
+        }
+    } else {
+      stack.push(char)
+  }
+}
+  return !stack.length
+}
+
+
+var isValidSwitchCase = function(s) {   
+  const stack = [];
+  
+  for (let i = 0 ; i < s.length ; i++) {
+      let c = s.charAt(i);
+      switch(c) {
+          case '(': stack.push(')');
+              break;
+          case '[': stack.push(']');
+              break;
+          case '{': stack.push('}');
+              break;
+          default:
+              if (c !== stack.pop()) {
+                  return false;
+              }
+      }
+  }
+  
+  return stack.length === 0;
+};
+
+
+
+
+
 // Test cases
-console.log(isValid("()"));        // true
-console.log(isValid("()[]{}"));    // true
-console.log(isValid("(]"));        // false
-console.log(isValid("({[]})"));    // true
+// console.log(isValid("()"));        // true
+// console.log(isValid("()[]{}"));    // true
+// console.log(isValid("(]"));        // false
+// console.log(isValid("({[]})"));    // true
 
 
+console.log(isValid("(("));        // false
 
