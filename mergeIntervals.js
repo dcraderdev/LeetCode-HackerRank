@@ -46,46 +46,46 @@ function merge_intervals(intervals) {
 // first attempt
 // function merge_intervals(intervals) {
     
-//     // intervals.sort((a,b)=> a[0] - b[0])
+//     intervals.sort((a,b)=> a[0] - b[0])
     
-//     // for(let i = 0; i < intervals.length - 1; i++){
+//     for(let i = 0; i < intervals.length - 1; i++){
         
-//     //     let interval1Num1 = intervals[i][0]
-//     //     let interval1Num2 = intervals[i][1]
+//         let interval1Num1 = intervals[i][0]
+//         let interval1Num2 = intervals[i][1]
         
-//     //     let interval2Num1 = intervals[i+1][0]
-//     //     let interval2Num2 = intervals[i+1][1]
+//         let interval2Num1 = intervals[i+1][0]
+//         let interval2Num2 = intervals[i+1][1]
         
-//     //     let indexesToRemove = []
+//         let indexesToRemove = []
         
-//     //     // checker
-//     //     let isNum1Between = interval1Num1 >= interval2Num1 && interval1Num1 <= interval2Num2
-//     //     let isNum2Between = interval1Num2 >= interval2Num1 && interval1Num2 <= interval2Num2
+//         // checker
+//         let isNum1Between = interval1Num1 >= interval2Num1 && interval1Num1 <= interval2Num2
+//         let isNum2Between = interval1Num2 >= interval2Num1 && interval1Num2 <= interval2Num2
         
-//     //     //if checker then handle merge
-//     //     if(isNum1Between || isNum2Between){
+//         //if checker then handle merge
+//         if(isNum1Between || isNum2Between){
             
 
-//     //         if(interval1Num1 < interval2Num1){
-//     //             intervals[i+1][0] = interval1Num1
-//     //         }
-//     //         if(interval1Num2 > interval2Num2){
-//     //             intervals[i+1][1] = interval1Num2
-//     //         }
-//     //         //remove first index
-//     //         // we could remove indexs after and jsut keep track of indexes now
-//     //         // indexesToRemove.push(i)
+//             if(interval1Num1 < interval2Num1){
+//                 intervals[i+1][0] = interval1Num1
+//             }
+//             if(interval1Num2 > interval2Num2){
+//                 intervals[i+1][1] = interval1Num2
+//             }
+//             //remove first index
+//             // we could remove indexs after and jsut keep track of indexes now
+//             // indexesToRemove.push(i)
             
-//     //         intervals.shift()
+//             intervals.shift()
             
-//     //     }
+//         }
             
         
         
         
-//     // }
+//     }
     
-//     // return intervals
+//     return intervals
 
 // }
 
