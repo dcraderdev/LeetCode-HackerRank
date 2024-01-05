@@ -41,7 +41,9 @@ const romanToInt = (s) => {
 
     let curr = s[i]
 
-    if(s[i+1] && romanObj[curr] < roman)
+    if(s[i+1] && romanObj[curr] < roman){
+      temp
+    }
 
   }
 
