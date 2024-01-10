@@ -47,6 +47,7 @@ const romanToInt = (s) => {
 
     if(nextChar && romanMap[currChar] < romanMap[nextChar]){
       total += romanMap[nextChar] - romanMap[currChar]
+      i++
     } else {
       total += romanMap[currChar]
     }
