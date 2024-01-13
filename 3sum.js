@@ -8,7 +8,34 @@
 
 var threeSum = function(nums) {
     
+
+  let numsObj = nums.reduce((acc, num)=>{
+
+    console.log(num);
+
+    if(acc[num]) {
+      acc[num]++
+    } else {
+      acc[num] = 1
+    }
+    return acc
+  },{})
+
+  console.log(numsObj);
+
+  let pointer = 0
+
+  for(let i = 0; i < nums.length; i++){
+    
+  }
+
+
+  return 'hello'
+
 };
+
+let nums = [-1,0,1,2,-1,-4]
+console.log(threeSum(nums));
 
 // Input: nums = [-1,0,1,2,-1,-4]
 // Output: [[-1,-1,2],[-1,0,1]]
