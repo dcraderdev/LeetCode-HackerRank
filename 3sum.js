@@ -4,9 +4,6 @@
 
  
 
-// Example 1:
-
-
 var threeSum = function(nums) {
   const res=[]
   nums.sort((a,b)=>a-b)
