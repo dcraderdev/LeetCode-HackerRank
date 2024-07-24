@@ -9,8 +9,6 @@
 
 // Please solve it without using lodash's _.chunk function.
 
- 
-
 // Example 1:
 
 // Input: arr = [1,2,3,4,5], size = 1
@@ -32,7 +30,10 @@
 // Output: []
 // Explanation: There are no elements to be chunked so an empty array is returned.
 
-
-var chunk = function(arr, size) {
-    
+var chunk = function (arr, size) {
+  let ans = [];
+  while (arr.length > 0) {
+    ans.push(arr.splice(0, size));
+  }
+  return ans;
 };
